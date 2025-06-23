@@ -61,13 +61,13 @@ Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
-Robert, Shell Redirections, not submitted
-Alex, Python, not submitted
-Ladouce, Shell Navigation, not submitted
-Annie, Shell Basics, not submitted
-Kevine, React Js, submitted
-Dior, Git, not submitted
-Gerry, Shell Basics, not submitted
+Emmy, Shell Redirections, not submitted
+Marieanne, Shell consoles, not submitted
+Brianne, Shell Navigation, not submitted
+Perry, Shell Basics, submitted
+Jackson, Shell Filters,not  submitted
+Gai, Shell Navigation, not submitted
+Peterson, Shell Basics, submitted
 EOF
 
 #
