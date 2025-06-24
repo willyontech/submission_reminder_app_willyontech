@@ -1,17 +1,17 @@
 #!/bin/bash
 
-#
+# this below pops up a message asking for your name. Whatever you type, it remembers it,This helps make everything that follows personal to you
 echo ""
 read -p "Enter you name: " Name
 
-#
+# This keeps everything organized and tidy, so your reminder system files don't just spread out everywhere.
 base_dr="submission_reminder_${Name}"
 mkdir -p "${base_dr}"
 
-#
+#Create required directory structure: app, modules, assets, and config folders inside base_dr
 mkdir -p "${base_dr}/app" && mkdir -p "${base_dr}/modules" && mkdir -p "${base_dr}/assets" && mkdir -p "${base_dr}/config"
 
-#
+#above is a  way the script uses to write another script directly into the app folder.
 cat > "${base_dr}/app/reminder.sh" << 'EOF'
 #!/bin/bash
 
@@ -30,7 +30,7 @@ echo "--------------------------------------------"
 check_submissions $submissions_file
 EOF
 
-#
+#Just like with the main reminder script, this part starts writing the functions.sh file into the modules folder.
 cat > "${base_dr}/modules/functions.sh" << 'EOF'
 #!/bin/bash
 
@@ -54,7 +54,7 @@ function check_submissions {
 }
 EOF
 
-#
+#Create a submissions text file listing students, assignments, and their submission status
 cat > "${base_dr}/assets/submissions.txt" << 'EOF'
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
@@ -70,14 +70,14 @@ Gai, Shell Navigation, not submitted
 Peterson, Shell Basics, submitted
 EOF
 
-#
+# Create a config file that defines the target assignment and number of days remaining
 cat > "${base_dr}/config/config.env" << 'EOF'
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
-#
+#Make all .sh scripts in the base directory and subdirectories executable
 cat > "${base_dr}/startup.sh" << 'EOF'
 #!/bin/bash
 ./app/reminder.sh
